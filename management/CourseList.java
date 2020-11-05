@@ -97,54 +97,47 @@ public class CourseList
    			return ti;
    		}
 		int i;
-		String tea="";
+		StringBuilder tea= new StringBuilder();
 		for(i=1;i<teachers.length();i++)
 		{
 			if(teachers.charAt(i)==']')
 			{
-				if(PersonList.isTID(tea))
-				{
-					return null;
-				}
-				int te=Integer.parseInt(tea);
-				int j;
-				for(j=0;j<ti.size();j++)
-				{
-					if(ti.get(j)==te)
-					{
-						return null;
-					}
-				}
-				ti.add(te);
+				if (teaAction(ti, tea.toString())) return null;
 				Collections.sort(ti);
 				return ti;
 			}
 			else if(teachers.charAt(i)==',')
 			{
-				if(PersonList.isTID(tea))
-				{
-					return null;
-				}
-				int te=Integer.parseInt(tea);
-				int j;
-				for(j=0;j<ti.size();j++)
-				{
-					if(ti.get(j)==te)
-					{
-						return null;
-					}
-				}
-				ti.add(te);
-				tea="";
+				if (teaAction(ti, tea.toString())) return null;
+				tea = new StringBuilder();
 			}
 			else
 			{
-				tea=tea+teachers.charAt(i);
+				tea.append(teachers.charAt(i));
 			}
 		}
 		return null;
    	}
-   	static boolean isCourseName(String name)
+
+	private static boolean teaAction(ArrayList<Integer> ti, String tea) {
+		if(PersonList.isTID(tea))
+		{
+			return true;
+		}
+		int te=Integer.parseInt(tea);
+		int j;
+		for(j=0;j<ti.size();j++)
+		{
+			if(ti.get(j)==te)
+			{
+				return true;
+			}
+		}
+		ti.add(te);
+		return false;
+	}
+
+	static boolean isCourseName(String name)
    	{
    		int i;
    		for(i=0;i<name.length();i++)
