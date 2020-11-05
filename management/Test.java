@@ -144,15 +144,7 @@ class NLQ
 		}
 		int i;
 		System.out.println("Page:"+page);
-		for(i=0;i<num;i++)
-		{
-			int j=i+(page-1)*num+1;
-			if(j>example.size())
-			{
-			   	break;
-			}
-			System.out.println((i+1)+"."+example.get(j-1).toString());
-		}
+		NLQAction(example, page, num);
 		System.out.println("n-next page, l-last page, q-quit");
 		String pmt;
 		label:
@@ -170,15 +162,7 @@ class NLQ
 						break label;
 					}
 					System.out.println("Page:" + page);
-					for (i = 0; i < num; i++)
-					{
-						int j = i + (page - 1) * num + 1;
-						if (j > example.size())
-						{
-							break;
-						}
-						System.out.println((i + 1) + "." + example.get(j - 1).toString());
-					}
+					NLQAction(example, page, num);
 					System.out.println("n-next page, l-last page, q-quit");
 					break;
 				case "l":
@@ -204,6 +188,19 @@ class NLQ
 					re.illegal("Input");
 					break label;
 			}
+		}
+	}
+
+	private void NLQAction(ArrayList<?> example, int page, int num) {
+		int i;
+		for(i=0; i<num; i++)
+		{
+			int j=i+(page-1)*num+1;
+			if(j>example.size())
+			{
+			   	break;
+			}
+			System.out.println((i+1)+"."+example.get(j-1).toString());
 		}
 	}
 }

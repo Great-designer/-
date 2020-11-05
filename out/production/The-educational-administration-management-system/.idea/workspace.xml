@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.26164266" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b13352fe-16f9-4c94-9e60-370438af6042" name="默认的" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,13 +46,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -70,6 +75,7 @@
       <updated>1604578927372</updated>
       <workItem from="1604578928693" duration="500000" />
       <workItem from="1604579487450" duration="374000" />
+      <workItem from="1604581033125" duration="196000" />
     </task>
     <servers />
   </component>
@@ -77,25 +83,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604579830015">
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604581164655">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604579830015" />
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1604579863726">
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604581164655" />
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1604581230257">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604579863726" />
-    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1604579863726">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604581230257" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1604581230257">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604579863725" />
-    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1604579863725">
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604581230257" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1604581230257">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604579863725" />
-    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1604579863726">
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604581230257" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1604581230257">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604579863726" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604581230257" />
+    <state x="371" y="100" key="extract.method.dialog" timestamp="1604581097557">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="100" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1604581097557" />
   </component>
 </project>
