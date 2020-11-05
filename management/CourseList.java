@@ -5,8 +5,7 @@ import java.util.Collections;
 
 public class CourseList
 {
-	private static CourseList cc;
-	private static ArrayList<Course> list= new ArrayList<>();
+	private static final ArrayList<Course> list= new ArrayList<>();
 	public static ArrayList<Course> getList()
 	{
 		return list;

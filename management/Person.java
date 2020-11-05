@@ -1,13 +1,9 @@
 package management;
 
-import java.util.ArrayList;
-
 class Person
 {
 	private IDNum id;
 	private String name;
-	private int sex;
-	private int birthDate;
 	String password;
 	public IDNum getId()
 	{
@@ -24,14 +20,6 @@ class Person
 	public void setName(String name)
 	{
 		this.name = name;
-	}
-	public void setSex(int sex)
-	{
-		this.sex = sex;
-	}
-	public void setBirthDate(int birthDate)
-	{
-		this.birthDate = birthDate;
 	}
 	public String toString()
 	{
@@ -89,15 +77,6 @@ class Student extends Person
 		rua.setName(name);
 		IDNum pia=new IDNum(id);
 		rua.setId(pia);
-		if(pia.order%2==1)
-		{
-			rua.setSex(1);
-		}
-		else
-		{
-			rua.setSex(0);
-		}
-		rua.setBirthDate(pia.birthDate);
 		rua.password="a12345";
 		rua.StudentId=Integer.parseInt(StudentId);
 		return rua;
@@ -136,15 +115,6 @@ class Teacher extends Person
 		rua.setName(name);
 		IDNum pia=new IDNum(id);
 		rua.setId(pia);
-		if(pia.order%2==1)
-		{
-			rua.setSex(1);
-		}
-		else
-		{
-			rua.setSex(0);
-		}
-		rua.setBirthDate(pia.birthDate);
 		rua.password="a12345";
 		rua.TeacherId=Integer.parseInt(TeacherId);
 		return rua;

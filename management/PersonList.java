@@ -4,9 +4,8 @@ import java.util.ArrayList;
 
 public class PersonList
 {
-	private static PersonList pp;
-	private static ArrayList<Student> StudentList= new ArrayList<>();
-	private static ArrayList<Teacher> TeacherList= new ArrayList<>();
+	private static final ArrayList<Student> StudentList= new ArrayList<>();
+	private static final ArrayList<Teacher> TeacherList= new ArrayList<>();
 	public static ArrayList<Student> getStudentList()
 	{
 		return StudentList;
