@@ -366,90 +366,8 @@ public class Test
 				}
 				else if(in[0].equals("gc"))
 	   			{
-					if(in.length==1)
-					{
-						re.illegal("Input");
-						continue;
-					}
-					switch (in[1])
-					{
-						case "-id":
-						{
-							if (in.length != 3)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String second = in[2];
-							if (CourseList.getCourseById(second) == null)
-							{
-								re.exist("Course");
-							}
-							else
-							{
-								System.out.println(Objects.requireNonNull(CourseList.getCourseById(second)).toString());
-							}
-							break;
-						}
-						case "-key":
-						{
-							if (in.length != 5)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String second = in[2];
-							String n = in[3];
-							String m = in[4];
-							Legal le = new Legal();
-							if (CourseList.getCoursesByKeyword(second).size() == 0)
-							{
-								re.exist("Course");
-							}
-							else if (!(le.isInt(n)) && (le.isInt(m)))
-							{
-								re.illegal("Input");
-							}
-							else
-							{
-								ArrayList<Course> b = CourseList.getCoursesByKeyword(second);
-								Collections.sort(b);
-								int page = Integer.parseInt(n);
-								int num = Integer.parseInt(m);
-								NLQ printer = new NLQ();
-								printer.printNLQ(b, page, num, "Course", sc, re);
-							}
-							break;
-						}
-						case "-all":
-						{
-							if (in.length != 4)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String n = in[2];
-							String m = in[3];
-							Collections.sort(CourseList.getList());
-							Legal le = new Legal();
-							if (!(le.isInt(n)) && (le.isInt(m)))
-							{
-								re.illegal("Input");
-							}
-							else
-							{
-								int page = Integer.parseInt(n);
-								int num = Integer.parseInt(m);
-								NLQ printer = new NLQ();
-								printer.printNLQ(CourseList.getList(), page, num, "Course", sc, re);
-							}
-							break;
-						}
-						default:
-							re.illegal("Input");
-							break;
-					}
-	   			}
+					gc(sc, re, in);
+				}
 				else if(in[0].equals("chgpw"))
    				{
 					if(in.length!=3)
@@ -607,90 +525,8 @@ public class Test
 				}
 				else if(in[0].equals("gc"))
 	   			{
-					if(in.length==1)
-					{
-						re.illegal("Input");
-						continue;
-					}
-					switch (in[1])
-					{
-						case "-id":
-						{
-							if (in.length != 3)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String second = in[2];
-							if (CourseList.getCourseById(second) == null)
-							{
-								re.exist("Course");
-							}
-							else
-							{
-								System.out.println(Objects.requireNonNull(CourseList.getCourseById(second)).toString());
-							}
-							break;
-						}
-						case "-key":
-						{
-							if (in.length != 5)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String second = in[2];
-							String n = in[3];
-							String m = in[4];
-							Legal le = new Legal();
-							if (CourseList.getCoursesByKeyword(second).size() == 0)
-							{
-								re.exist("Course");
-							}
-							else if (!(le.isInt(n)) && (le.isInt(m)))
-							{
-								re.illegal("Input");
-							}
-							else
-							{
-								ArrayList<Course> b = CourseList.getCoursesByKeyword(second);
-								Collections.sort(b);
-								int page = Integer.parseInt(n);
-								int num = Integer.parseInt(m);
-								NLQ printer = new NLQ();
-								printer.printNLQ(b, page, num, "Course", sc, re);
-							}
-							break;
-						}
-						case "-all":
-						{
-							if (in.length != 4)
-							{
-								re.illegal("Input");
-								continue;
-							}
-							String n = in[2];
-							String m = in[3];
-							Collections.sort(CourseList.getList());
-							Legal le = new Legal();
-							if (!(le.isInt(n)) && (le.isInt(m)))
-							{
-								re.illegal("Input");
-							}
-							else
-							{
-								int page = Integer.parseInt(n);
-								int num = Integer.parseInt(m);
-								NLQ printer = new NLQ();
-								printer.printNLQ(CourseList.getList(), page, num, "Course", sc, re);
-							}
-							break;
-						}
-						default:
-							re.illegal("Input");
-							break;
-					}
-	   			}
+					gc(sc, re, in);
+				}
 				else if(in[0].equals("chgpw"))
    				{
 					if(in.length!=3)
@@ -1016,6 +852,92 @@ public class Test
 		}
 		sc.close();
    	}
+
+	private static void gc(Scanner sc, Ret re, String[] in) {
+		if(in.length==1)
+		{
+			re.illegal("Input");
+			return;
+		}
+		switch (in[1])
+		{
+			case "-id":
+			{
+				if (in.length != 3)
+				{
+					re.illegal("Input");
+					return;
+				}
+				String second = in[2];
+				if (CourseList.getCourseById(second) == null)
+				{
+					re.exist("Course");
+				}
+				else
+				{
+					System.out.println(Objects.requireNonNull(CourseList.getCourseById(second)).toString());
+				}
+				break;
+			}
+			case "-key":
+			{
+				if (in.length != 5)
+				{
+					re.illegal("Input");
+					return;
+				}
+				String second = in[2];
+				String n = in[3];
+				String m = in[4];
+				Legal le = new Legal();
+				if (CourseList.getCoursesByKeyword(second).size() == 0)
+				{
+					re.exist("Course");
+				}
+				else if (!(le.isInt(n)) && (le.isInt(m)))
+				{
+					re.illegal("Input");
+				}
+				else
+				{
+					ArrayList<Course> b = CourseList.getCoursesByKeyword(second);
+					Collections.sort(b);
+					int page = Integer.parseInt(n);
+					int num = Integer.parseInt(m);
+					NLQ printer = new NLQ();
+					printer.printNLQ(b, page, num, "Course", sc, re);
+				}
+				break;
+			}
+			case "-all":
+			{
+				if (in.length != 4)
+				{
+					re.illegal("Input");
+					return;
+				}
+				String n = in[2];
+				String m = in[3];
+				Collections.sort(CourseList.getList());
+				Legal le = new Legal();
+				if (!(le.isInt(n)) && (le.isInt(m)))
+				{
+					re.illegal("Input");
+				}
+				else
+				{
+					int page = Integer.parseInt(n);
+					int num = Integer.parseInt(m);
+					NLQ printer = new NLQ();
+					printer.printNLQ(CourseList.getList(), page, num, "Course", sc, re);
+				}
+				break;
+			}
+			default:
+				re.illegal("Input");
+				break;
+		}
+	}
 
 	private static void clist(Scanner sc, Ret re, String[] in) {
 		if(in.length!=4)
