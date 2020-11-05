@@ -362,46 +362,7 @@ public class Test
 				}
 				else if(in[0].equals("clist"))
 				{
-					if(in.length!=4)
-					{
-						re.illegal("Input");
-						continue;
-					}
-					String cid=in[1];
-					String n=in[2];
-					String m=in[3];
-					Legal le=new Legal();
-					if(CourseList.isCourseId(cid))
-					{
-						re.exist("Course");
-					}
-					else if(CourseList.getCourseById(cid)==null)
-					{
-						re.exist("Course");
-					}
-					else if(!(le.isInt(n))&&(le.isInt(m)))
-					{
-						re.illegal("Input");
-					}
-					else
-					{
-						int page=Integer.parseInt(n);
-						int num=Integer.parseInt(m);
-						ArrayList<Integer> si= Objects.requireNonNull(CourseList.getCourseById(cid)).StudentId;
-						ArrayList<Stu> ss= new ArrayList<>();
-						int i;
-						for(i=0;i<si.size();i++)
-						{
-							Student ssr= PersonList.getStudentId(si.get(i));
-							Stu rss=new Stu();
-							rss.name= Objects.requireNonNull(ssr).getName();
-							rss.StudentId=ssr.StudentId;
-							ss.add(rss);
-						}
-						Collections.sort(ss);
-						NLQ printer=new NLQ();
-						printer.printNLQ(ss,page,num,"Record",sc,re);
-					}
+					clist(sc, re, in);
 				}
 				else if(in[0].equals("gc"))
 	   			{
@@ -793,46 +754,7 @@ public class Test
 				}
 				if(in[0].equals("clist"))
 				{
-					if(in.length!=4)
-					{
-						re.illegal("Input");
-						continue;
-					}
-					String cid=in[1];
-					String n=in[2];
-					String m=in[3];
-					Legal le=new Legal();
-					if(CourseList.isCourseId(cid))
-					{
-						re.exist("Course");
-					}
-					else if(CourseList.getCourseById(cid)==null)
-					{
-						re.exist("Course");
-					}
-					else if(!(le.isInt(n))&&(le.isInt(m)))
-					{
-						re.illegal("Input");
-					}
-					else
-					{
-						int page=Integer.parseInt(n);
-						int num=Integer.parseInt(m);
-						ArrayList<Integer> si= Objects.requireNonNull(CourseList.getCourseById(cid)).StudentId;
-						ArrayList<Stu> ss= new ArrayList<>();
-						int i;
-						for(i=0;i<si.size();i++)
-						{
-							Student ssr= PersonList.getStudentId(si.get(i));
-							Stu rss=new Stu();
-							rss.name= Objects.requireNonNull(ssr).getName();
-							rss.StudentId=ssr.StudentId;
-							ss.add(rss);
-						}
-						Collections.sort(ss);
-						NLQ printer=new NLQ();
-						printer.printNLQ(ss,page,num,"Record",sc,re);
-					}
+					clist(sc, re, in);
 				}
 				else if(in[0].equals("udc"))
 	   			{
@@ -1094,6 +1016,49 @@ public class Test
 		}
 		sc.close();
    	}
+
+	private static void clist(Scanner sc, Ret re, String[] in) {
+		if(in.length!=4)
+		{
+			re.illegal("Input");
+			return;
+		}
+		String cid=in[1];
+		String n=in[2];
+		String m=in[3];
+		Legal le=new Legal();
+		if(CourseList.isCourseId(cid))
+		{
+			re.exist("Course");
+		}
+		else if(CourseList.getCourseById(cid)==null)
+		{
+			re.exist("Course");
+		}
+		else if(!(le.isInt(n))&&(le.isInt(m)))
+		{
+			re.illegal("Input");
+		}
+		else
+		{
+			int page=Integer.parseInt(n);
+			int num=Integer.parseInt(m);
+			ArrayList<Integer> si= Objects.requireNonNull(CourseList.getCourseById(cid)).StudentId;
+			ArrayList<Stu> ss= new ArrayList<>();
+			int i;
+			for(i=0;i<si.size();i++)
+			{
+				Student ssr= PersonList.getStudentId(si.get(i));
+				Stu rss=new Stu();
+				rss.name= Objects.requireNonNull(ssr).getName();
+				rss.StudentId=ssr.StudentId;
+				ss.add(rss);
+			}
+			Collections.sort(ss);
+			NLQ printer=new NLQ();
+			printer.printNLQ(ss,page,num,"Record",sc,re);
+		}
+	}
 
 	private static void myc(Scanner sc, Ret re, String n, String m, ArrayList<Course> b) {
 		Collections.sort(b);
