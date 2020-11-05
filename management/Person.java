@@ -25,17 +25,9 @@ class Person
 	{
 		this.name = name;
 	}
-	public int getSex()
-	{
-		return sex;
-	}
 	public void setSex(int sex)
 	{
 		this.sex = sex;
-	}
-	public int getBirthDate()
-	{
-		return birthDate;
 	}
 	public void setBirthDate(int birthDate)
 	{
@@ -63,33 +55,11 @@ class Person
 		String birth1="Birthday:"+year+"/"+month+"/"+date;
 		return name1+"\n"+id1+"\n"+sex1+"\n"+birth1;
 	}
-	static Person newPerson(String name,String id)
-	{
-		if(IDNum.checkIDNum(id))
-		{
-			return null;
-		}
-		Person a=new Person();
-		a.setName(name);
-		IDNum idd=new IDNum(id);
-		a.setId(idd);
-		if(idd.order%2==1)
-		{
-			a.setSex(1);
-		}
-		else
-		{
-			a.setSex(0);
-		}
-		a.setBirthDate(idd.birthDate);
-		return a;
-	}
 }
 
 class Student extends Person
 {
 	int StudentId;
-	ArrayList<Course> StudentCourse;
 	public String toString()
 	{
 		String name1="Name:"+this.getName();
@@ -137,7 +107,6 @@ class Student extends Person
 class Teacher extends Person
 {
 	int TeacherId;
-	ArrayList<Course> TeacherCourse;
 	public String toString()
 	{
 		String name1="Name:"+this.getName();

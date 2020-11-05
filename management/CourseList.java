@@ -6,22 +6,10 @@ import java.util.Collections;
 public class CourseList
 {
 	private static CourseList cc;
-	public static CourseList getCc()
-	{
-		return cc;
-	}
-	public static void setCc(CourseList cc)
-	{
-		CourseList.cc = cc;
-	}
 	private static ArrayList<Course> list= new ArrayList<>();
 	public static ArrayList<Course> getList()
 	{
 		return list;
-	}
-	public static void setList(ArrayList<Course> list)
-	{
-		CourseList.list = list;
 	}
 	private CourseList() {}
 	static Course getCourseById(String cid)
@@ -87,13 +75,6 @@ public class CourseList
 		}
 		return answer;
 	}
-	static void addCourse(Course a)
-	{
-		if(CourseList.getCourseById(a.cid)==null&&a.capacity>=0)
-		{
-			CourseList.getList().add(a);
-		}
-	}
 	static void changeCourse(Course a)
 	{
 		if(a.capacity>=0)
@@ -109,26 +90,6 @@ public class CourseList
 			}
 		}
 	}
-   	static void changeCid(String old,String novel)
-   	{
-   		if(CourseList.getCourseById(novel)==null)
-		{
-			int i;
-			for(i=0;i<getList().size();i++)
-			{
-				if(getList().get(i).cid.compareTo(old)==0)
-				{
-					Course b=new Course();
-					b.cid=novel;
-					b.name=getList().get(i).name;
-					b.capacity=getList().get(i).capacity;
-					b.TeacherId=getList().get(i).TeacherId;
-					getList().set(i,b);
-					break;
-				}
-			}
-		}
-   	}
    	static ArrayList<Integer> isTeacherList(String teachers)
    	{
    		ArrayList<Integer> ti= new ArrayList<>();

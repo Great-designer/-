@@ -5,31 +5,15 @@ import java.util.ArrayList;
 public class PersonList
 {
 	private static PersonList pp;
-	public static PersonList getPp()
-	{
-		return pp;
-	}
-	public static void setPp(PersonList pp)
-	{
-		PersonList.pp = pp;
-	}
 	private static ArrayList<Student> StudentList= new ArrayList<>();
 	private static ArrayList<Teacher> TeacherList= new ArrayList<>();
 	public static ArrayList<Student> getStudentList()
 	{
 		return StudentList;
 	}
-	public static void setStudentList(ArrayList<Student> studentList)
-	{
-		StudentList = studentList;
-	}
 	public static ArrayList<Teacher> getTeacherList()
 	{
 		return TeacherList;
-	}
-	public static void setTeacherList(ArrayList<Teacher> teacherList)
-	{
-		TeacherList = teacherList;
 	}
 	private PersonList(){}
 	static IDNum idInTeacher(String ID)

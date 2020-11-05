@@ -81,16 +81,4 @@ public class Course implements Comparable<Course>
 		}
 		return -1;
    	}
-   	int inTeacher(int tid)
-   	{
-   		int i;
-		for(i=0;i<this.TeacherId.size();i++)
-		{
-			if(this.TeacherId.get(i)==tid)
-			{
-				return i;
-			}
-		}
-		return -1;
-   	}
 }
