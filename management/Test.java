@@ -358,19 +358,7 @@ public class Test
 					String n=in[1];
 					String m=in[2];
 					ArrayList<Course> b= CourseList.getCoursesByTID(temp.TeacherId);
-					Collections.sort(b);
-					Legal le=new Legal();
-					if(!(le.isInt(n))&&(le.isInt(m)))
-					{
-						re.illegal("Input");
-					}
-					else
-					{
-						int page=Integer.parseInt(n);
-						int num=Integer.parseInt(m);
-						NLQ printer=new NLQ();
-						printer.printNLQ(b,page,num,"Course",sc,re);
-					}
+					myc(sc, re, n, m, b);
 				}
 				else if(in[0].equals("clist"))
 				{
@@ -654,19 +642,7 @@ public class Test
 					String n=in[1];
 					String m=in[2];
 					ArrayList<Course> b= CourseList.getCoursesBySID(temp.StudentId);
-					Collections.sort(b);
-					Legal le=new Legal();
-					if(!(le.isInt(n))&&(le.isInt(m)))
-					{
-						re.illegal("Input");
-					}
-					else
-					{
-						int page=Integer.parseInt(n);
-						int num=Integer.parseInt(m);
-						NLQ printer=new NLQ();
-						printer.printNLQ(b,page,num,"Course",sc,re);
-					}
+					myc(sc, re, n, m, b);
 				}
 				else if(in[0].equals("gc"))
 	   			{
@@ -1118,4 +1094,20 @@ public class Test
 		}
 		sc.close();
    	}
+
+	private static void myc(Scanner sc, Ret re, String n, String m, ArrayList<Course> b) {
+		Collections.sort(b);
+		Legal le=new Legal();
+		if(!(le.isInt(n))&&(le.isInt(m)))
+		{
+			re.illegal("Input");
+		}
+		else
+		{
+			int page=Integer.parseInt(n);
+			int num=Integer.parseInt(m);
+			NLQ printer=new NLQ();
+			printer.printNLQ(b,page,num,"Course",sc,re);
+		}
+	}
 }

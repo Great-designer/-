@@ -29,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -42,6 +43,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -65,6 +77,7 @@
       <workItem from="1604581033125" duration="196000" />
       <workItem from="1604581246676" duration="151000" />
       <workItem from="1604581412729" duration="8000" />
+      <workItem from="1604581774975" duration="100000" />
     </task>
     <servers />
   </component>
@@ -72,29 +85,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604581390822">
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604581783568">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604581390822" />
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1604581398238">
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604581783568" />
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1604581875478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604581398238" />
-    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1604581398238">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604581875478" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1604581875478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604581398238" />
-    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1604581398238">
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604581875478" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1604581875478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604581398238" />
-    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1604581398238">
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604581875478" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1604581875478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604581398238" />
-    <state x="371" y="100" key="extract.method.dialog" timestamp="1604581328676">
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604581875478" />
+    <state x="371" y="100" key="extract.method.dialog" timestamp="1604581846272">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="100" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1604581328676" />
+    <state x="371" y="100" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1604581846272" />
   </component>
 </project>
