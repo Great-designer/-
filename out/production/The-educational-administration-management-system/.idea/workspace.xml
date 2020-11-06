@@ -26,12 +26,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="构件" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -47,15 +55,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,6 +86,7 @@
       <workItem from="1604581246676" duration="151000" />
       <workItem from="1604581412729" duration="8000" />
       <workItem from="1604581774975" duration="100000" />
+      <workItem from="1604583052032" duration="1301000" />
     </task>
     <servers />
   </component>
@@ -87,10 +94,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604581783568">
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604584356371">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604581783568" />
+    <state x="398" y="208" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1604584356371" />
+    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1604584152202">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604584152202" />
     <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1604581875478">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -107,6 +118,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604581875478" />
+    <state x="70" y="0" key="SettingsEditor" timestamp="1604583827007">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="70" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604583827007" />
+    <state x="349" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1604584163155">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1604584163155" />
     <state x="371" y="100" key="extract.method.dialog" timestamp="1604581846272">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
